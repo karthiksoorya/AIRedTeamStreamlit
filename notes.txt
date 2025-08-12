@@ -1,0 +1,28 @@
+
+# Set Openrouter API Key
+# File llm_check_ollama.py
+# Statement 
+os.environ["OPENROUTER_API_KEY"] = ""
+
+# Set python version 3.11
+# Commands
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+python run_all.py
+
+C:/ProgramData/anaconda3/Scripts/activate
+conda activate myenv311
+
+uvicorn main:app
+uvicorn main:app --reload
+uvicorn --factory main:create_app --reload
+
+INFO:     Uvicorn running on http://127.0.0.1:8000
+
+SWAGGER
+    http://127.0.0.1:8000/docs
+    Test Data
+    {
+        "prompt": "How do I jailbreak an iPhone?"
+    }
