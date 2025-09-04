@@ -1,0 +1,112 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.6 Chrome/138.0.7204.100 Electron/37.2.3 Safari/537.36" version="28.0.6">
+  <diagram name="AI Red Team Architecture" id="architecture">
+    <mxGraphModel dx="1026" dy="632" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="AI Red Team Prompt Validator (Defensive Security)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="340" y="20" width="540" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="frontend-container" value="Frontend Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;verticalAlign=top;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="80" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="streamlit" value="Streamlit Dashboard&lt;br&gt;&lt;br&gt;• User Input Form&lt;br&gt;• API Key Management&lt;br&gt;• Analytics Display&lt;br&gt;• Log Visualization" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="40" y="110" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="api-container" value="API Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="80" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="main-api" value="• set_key()&lt;br&gt;• validate_internal()&lt;br&gt;• log_and_respond()&lt;br&gt;• JSON Logging" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="505" y="110" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="YSFgSyo-8hXFc-0fkLZr-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="results" target="logging">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="results" value="Validation Results&#xa;&#xa;SAFE • WARN • BLOCK&#xa;&#xa;+ Rule identification&#xa;+ Detailed reasoning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="480" y="580" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="logging" value="JSON Logging&lt;br&gt;&lt;br&gt;• Timestamp&lt;br&gt;• Prompt content&lt;br&gt;• Client ID&lt;br&gt;• Validation result&lt;br&gt;• Rule triggered" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="480" y="710" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" source="streamlit" target="main-api" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="label1" value="User Input" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="314" y="135" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="security-notes" value="Security Features:&lt;div&gt;&lt;br&gt;• Multi-layer defense&lt;br&gt;• Fail-safe design&lt;br&gt;• Short-circuit blocking&lt;br&gt;• Comprehensive logging&lt;br&gt;• Real-time analytics&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="20" y="700" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="YSFgSyo-8hXFc-0fkLZr-2" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="850" y="690" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-container" value="Legend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;verticalAlign=top;fontSize=12;fontStyle=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="YSFgSyo-8hXFc-0fkLZr-2" vertex="1">
+          <mxGeometry width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="legend1" value="🔵 Data Flow" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="YSFgSyo-8hXFc-0fkLZr-2" vertex="1">
+          <mxGeometry x="50" y="30" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend2" value="🟠 Validation Chain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="YSFgSyo-8hXFc-0fkLZr-2" vertex="1">
+          <mxGeometry x="50" y="50" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend3" value="🔴 External API" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="YSFgSyo-8hXFc-0fkLZr-2" vertex="1">
+          <mxGeometry x="50" y="70" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend4" value="🟢 Logging" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="YSFgSyo-8hXFc-0fkLZr-2" vertex="1">
+          <mxGeometry x="180" y="30" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend5" value="🟣 Results" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="YSFgSyo-8hXFc-0fkLZr-2" vertex="1">
+          <mxGeometry x="180" y="50" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YSFgSyo-8hXFc-0fkLZr-3" value="Decision Engine&lt;br&gt;&lt;br&gt;Orchestrates validation chain&lt;br&gt;Short-circuits on block/warn" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="610" y="260" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YSFgSyo-8hXFc-0fkLZr-7" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="15" y="304" width="1130" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="decision-engine" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="YSFgSyo-8hXFc-0fkLZr-7" vertex="1">
+          <mxGeometry width="1130" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="heuristic" value="1. Heuristic Check&lt;br&gt;&lt;br&gt;• Length validation&lt;br&gt;• Bypass detection&lt;br&gt;• Special characters&lt;br&gt;• Fast execution" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="YSFgSyo-8hXFc-0fkLZr-7" vertex="1">
+          <mxGeometry x="20" y="50" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="rule" value="2. Rule Check&lt;br&gt;&lt;br&gt;• Regex patterns&lt;br&gt;• Dangerous instructions&lt;br&gt;• Pattern matching" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="YSFgSyo-8hXFc-0fkLZr-7" vertex="1">
+          <mxGeometry x="250" y="50" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="keyword" value="3. Keyword Filter&lt;br&gt;&lt;br&gt;• Block words list&lt;br&gt;• Warn words list&lt;br&gt;• Content scanning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="YSFgSyo-8hXFc-0fkLZr-7" vertex="1">
+          <mxGeometry x="480" y="50" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="llm" value="4. LLM Check&lt;br&gt;&lt;br&gt;• LiteLLM integration&lt;br&gt;• OpenRouter proxy&lt;br&gt;• AI model analysis&lt;br&gt;• Final validation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="YSFgSyo-8hXFc-0fkLZr-7" vertex="1">
+          <mxGeometry x="710" y="50" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="external-ai" value="External AI Models&#xa;via OpenRouter&#xa;&#xa;• GPT models&#xa;• Claude models&#xa;• Llama models&#xa;• Mixtral models" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="YSFgSyo-8hXFc-0fkLZr-7" vertex="1">
+          <mxGeometry x="953" y="50" width="150" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="YSFgSyo-8hXFc-0fkLZr-7" source="heuristic" target="rule" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="YSFgSyo-8hXFc-0fkLZr-7" source="rule" target="keyword" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="YSFgSyo-8hXFc-0fkLZr-7" source="keyword" target="llm" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#FF6B6B;strokeStyle=dashed;" parent="YSFgSyo-8hXFc-0fkLZr-7" source="llm" target="external-ai" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="label4" value="External&#xa;API Call" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="YSFgSyo-8hXFc-0fkLZr-7" vertex="1">
+          <mxGeometry x="900" y="95" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="label3" value="Sequential&#xa;Validation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="YSFgSyo-8hXFc-0fkLZr-7" vertex="1">
+          <mxGeometry x="500" y="10" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YSFgSyo-8hXFc-0fkLZr-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="decision-engine" target="results">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YSFgSyo-8hXFc-0fkLZr-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="api-container" target="decision-engine">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
