@@ -4,6 +4,7 @@
 It is designed to serve as a **middleware guardrail** between users and LLMs — enabling rule-based, heuristic, and LLM-based validation of prompts in real-time.
 
 > ✅ Use it to validate, log, and analyze prompts before they reach production LLMs.
+> API Only version is available - https://github.com/karthiksoorya/AIRedTeam
 
 ---
 
