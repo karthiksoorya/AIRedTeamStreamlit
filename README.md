@@ -128,48 +128,9 @@ Content-Type: application/json
 
 ---
 
-## 📦 Flow
+## 📦 Flow 
 
-```mermaid
-%%{init: {'theme':'base'}}%%
-flowchart LR
-  %% Nodes
-  A["Clients/LLM Apps"]:::client
-  S["Streamlit\nDashboard"]:::ui
-  B["External Validate API\n(FastAPI + X-API-Key)"]:::api
-  C["Internal Validate API\n(FastAPI)"]:::api
-  D["Decision Engine\n(heuristics, rules, keywords, llm_check)"]:::core
-  E["LLM Check\n(LiteLLM to AWS Bedrock)"]:::llm
-  F["Log Storage\n(JSON Lines)"]:::store
-
-  %% Optional grouping
-  subgraph Backend["Validation Service (FastAPI)"]
-    B
-    C
-    D
-  end
-  subgraph Integrations["Integrations & Storage"]
-    E
-    F
-  end
-
-  %% Edges
-  A --> B
-  S --> C
-  B --> D
-  C --> D
-  D --> E
-  D --> F
-  F --> S
-
-  %% Styles
-  classDef client fill:#E8F0FE,stroke:#1A73E8,stroke-width:2,rx:8,ry:8;
-  classDef api    fill:#E3F2FD,stroke:#1976D2,stroke-width:2,rx:8,ry:8;
-  classDef core   fill:#E8F5E9,stroke:#2E7D32,stroke-width:2,rx:8,ry:8;
-  classDef ui     fill:#FDECEA,stroke:#D93025,stroke-width:2,rx:8,ry:8;
-  classDef llm    fill:#F3E8FD,stroke:#6A1B9A,stroke-width:2,rx:8,ry:8;
-  classDef store  fill:#FFF3E0,stroke:#EF6C00,stroke-width:2,rx:8,ry:8;
-```
+![Alt text](docs/architecture_diagram.png)
 
 
 ---
